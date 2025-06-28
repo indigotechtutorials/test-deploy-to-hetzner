@@ -7,7 +7,7 @@ image: yunggindigo/deploy_to_hetzner
 # Deploy to these servers.
 servers:
   web:
-    - 192.168.0.1
+    - 5.161.73.191
   # job:
   #   hosts:
   #     - 192.168.0.1
@@ -88,8 +88,9 @@ builder:
   #   - RAILS_MASTER_KEY
 
 # Use a different ssh user than root
-# ssh:
-#   user: app
+ssh:
+  user: root
+  keys: ['~/.ssh/testhetznerdeploy']
 
 # Use accessory services (secrets come from .kamal/secrets).
 # accessories:
